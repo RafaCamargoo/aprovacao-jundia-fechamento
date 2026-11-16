@@ -63,14 +63,15 @@ p{margin:0}
 .topo{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{width:74px}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;border-radius:10px;padding:8px 12px;font-family:var(--heading);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:13px;line-height:1.1;animation:chip 2.2s infinite}
-.eyebrow i{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#fff;color:var(--red);font:10px Arial,sans-serif;font-style:normal}
+.eyebrow i{position:relative;flex:none;display:inline-block;width:22px;height:22px;border-radius:50%;background:#fff}
+.eyebrow i::after{content:"";position:absolute;left:52%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:5px 0 5px 8px;border-color:transparent transparent transparent var(--red)}
 @keyframes chip{0%{box-shadow:0 0 0 0 rgba(237,50,55,.5)}70%{box-shadow:0 0 0 12px rgba(237,50,55,0)}100%{box-shadow:0 0 0 0 rgba(237,50,55,0)}}
 .hero h1{font-size:clamp(25px,7.4vw,31px);line-height:1.04}
 .hero .apoio{font-size:15px;line-height:1.45;color:#4A2A1C}
 .hero .btn-ir{display:none}
 
 /* frame de live do Instagram */
-.live-frame{position:relative;overflow:hidden;width:100%;height:clamp(128px,calc(100svh - 600px),360px);border:4px solid #fff;border-radius:18px;background:#1a0d08;box-shadow:0 12px 25px rgba(93,46,33,.22);color:#fff}
+.live-frame{position:relative;overflow:hidden;width:100%;height:clamp(190px,calc(100svh - 560px),360px);border:4px solid #fff;border-radius:18px;background:#1a0d08;box-shadow:0 12px 25px rgba(93,46,33,.22);color:#fff}
 .live-frame>img{width:100%;height:100%;object-fit:cover;object-position:68% 22%;animation:respira-foto 16s ease-in-out infinite alternate}
 @keyframes respira-foto{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1%,1%)}}
 .live-frame::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 52%,rgba(0,0,0,.6) 100%)}
@@ -172,7 +173,8 @@ p{margin:0}
   .topo{justify-content:flex-start;gap:18px}
   .logo{width:96px}
   .eyebrow{font-size:16px;padding:10px 16px;border-radius:12px}
-  .eyebrow i{width:28px;height:28px;font-size:12px}
+  .eyebrow i{width:28px;height:28px}
+  .eyebrow i::after{border-width:6px 0 6px 10px}
   .hero h1{font-size:clamp(42px,4.4vw,58px);line-height:1.02}
   .hero .apoio{font-size:19px;max-width:42ch}
   .hero .btn-ir{display:flex;max-width:440px;margin-top:6px}
@@ -203,8 +205,15 @@ p{margin:0}
   .tela h2{font-size:28px}
 }
 .form-card .sub-titulo{display:none}
-.ig-c:nth-last-child(n+3){display:none}
-@media(min-width:900px){.ig-c:nth-last-child(n+3){display:flex}}
+.ig-c:nth-last-child(n+2){display:none}
+@media(max-width:899px){
+  .live-frame>img{object-position:72% 18%}
+  .ig-oferta{right:auto;left:8px;top:auto;bottom:66px;max-width:46%;font-size:9px;transform:rotate(-2deg);animation:none}
+  .ig-comments{bottom:34px;width:58%;max-height:30px}
+  .ig-c{font-size:10px}
+  .ig-c i{width:16px;height:16px}
+}
+@media(min-width:900px){.ig-c:nth-last-child(n+2){display:flex}}
 @media(max-width:360px){.btn{font-size:13.5px;padding-left:14px}.timer small{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.entra,.selo{opacity:1!important;transform:none!important}.ig-hearts{display:none}}
 </style>
@@ -219,7 +228,7 @@ p{margin:0}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="topo entra" style="--d:0s">
-        <span class="eyebrow"><i aria-hidden="true">▶</i>Ao vivo agora</span>
+        <span class="eyebrow"><i aria-hidden="true"></i>Ao vivo agora</span>
         <img class="logo" src="https://rafacamargoo.github.io/aprovacao-jundia/live/imagem.png" alt="Jundiá Sorvetes" width="509" height="300">
       </div>
       <h1 class="entra" style="--d:.1s">Garanta a sua Jundiá enquanto a live está no ar.</h1>
