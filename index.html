@@ -86,7 +86,7 @@ p{margin:0}
 .ig-views{flex:none;display:inline-flex;align-items:center;gap:4px;background:rgba(0,0,0,.45);border-radius:5px;padding:2px 6px;font-size:11px;font-variant-numeric:tabular-nums}
 .ig-views svg{width:12px;height:12px}
 .ig-oferta{position:absolute;z-index:2;right:8px;top:44px;max-width:44%;background:var(--yellow);color:var(--brown);border-radius:10px;padding:6px 8px;font-family:var(--heading);font-weight:800;text-transform:uppercase;font-size:9.5px;line-height:1.15;text-align:center;box-shadow:0 8px 18px rgba(0,0,0,.3);transform:rotate(3deg);animation:balanca 3.2s ease-in-out infinite}
-.ig-oferta b{display:block;font-size:1.25em}
+.ig-oferta b{display:block;font-size:1.25em;font-weight:800}
 @keyframes balanca{0%,100%{transform:rotate(3deg)}50%{transform:rotate(0deg) translateY(-3px)}}
 .ig-comments{position:absolute;z-index:2;left:8px;bottom:34px;width:min(62%,280px);display:flex;flex-direction:column;justify-content:flex-end;gap:6px;max-height:55%;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%);mask-image:linear-gradient(180deg,transparent 0,#000 26%)}
 .ig-c{display:flex;gap:6px;align-items:flex-start;font-size:10.5px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.55);animation:sobe-c .5s cubic-bezier(.2,.8,.2,1)}
@@ -262,11 +262,12 @@ p{margin:0}
   <div class="wrap">
     <div class="form-card revela" id="card">
       <h2 class="titulo" id="form-title">Iniciar minha reunião</h2>
-      <p class="sub-titulo">Só nome e WhatsApp. O consultor chama você em instantes.</p>
+      <p class="sub-titulo">Preencha seus dados. O consultor chama você em instantes.</p>
       <div id="area-form">
         <form id="lead-form" novalidate>
           <div class="campo"><label for="nome">Nome <span class="req" aria-hidden="true">*</span></label><input type="text" id="nome" name="Nome_completo" autocomplete="name" placeholder="Seu nome" maxlength="120" required></div>
           <div class="campo"><label for="telefone">WhatsApp com DDD <span class="req" aria-hidden="true">*</span></label><input type="tel" id="telefone" name="WhatsApp" inputmode="numeric" maxlength="15" autocomplete="tel" placeholder="(00) 00000-0000" required></div>
+          <div class="campo"><label for="email">E-mail <span class="req" aria-hidden="true">*</span></label><input type="email" id="email" name="E_mail" autocomplete="email" placeholder="voce@email.com" maxlength="180" required></div>
           <p class="form-error" id="form-error" role="alert"></p>
           <button class="btn" type="submit" id="btn-enviar">Iniciar minha reunião agora</button>
           <p class="espera" id="espera" hidden><i aria-hidden="true"></i>Conectando você a um consultor…</p>
