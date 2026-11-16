@@ -222,7 +222,7 @@ p{margin:0}
 </head>
 <body>
 
-<div class="live-bar" id="live-bar" role="status" aria-label="Ao vivo agora, condição válida até as 20h"><div class="track" aria-hidden="true"><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 20h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 20h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 20h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 20h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 20h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 20h</span></span></div></div>
+<div class="live-bar" id="live-bar" role="status" aria-label="Ao vivo agora, condição válida até as 18h"><div class="track" aria-hidden="true"><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 18h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 18h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 18h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 18h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 18h</span></span><span class="item"><span class="dot" aria-hidden="true"></span><span class="bar-txt">Ao vivo agora · condição válida até as 18h</span></span></div></div>
 
 <main>
 <section class="hero">
@@ -305,7 +305,7 @@ p{margin:0}
 </section>
 
 <div class="selos-wrap"><section class="wrap selos" aria-label="Condições da live">
-  <div class="selo" style="--i:0"><b data-conta="10" data-fmt="%">10%</b><span>da taxa de franquia</span></div>
+  <div class="selo" style="--i:0"><b data-conta="70" data-fmt="%">70%</b><span>de desconto na taxa de franquia</span></div>
   <div class="selo" style="--i:1"><b data-conta="30" data-fmt="mil">R$ 30 mil</b><span>Concorra na sua loja</span></div>
   <div class="selo" style="--i:2"><b>+</b><span>Bônus da live inclusos</span></div>
 </section></div>
@@ -322,7 +322,7 @@ p{margin:0}
    seguidas e isso quebra a página. O código coloca o https sozinho. */
 window.LP_FECHAMENTO = {
   DATA_LIVE: '18/11',
-  ENCERRA_EM: '2026-11-18T20:00:00-03:00',
+  ENCERRA_EM: '2026-11-18T18:00:00-03:00',
   /* Mesmo webhook da LP de captação (Opscap / Kommo) */
   LEAD_WEBHOOKS: [
     'automation.opscap.collieassociados.com/webhook/jundia-sorvetes-novo'
@@ -407,7 +407,7 @@ window.LP_FECHAMENTO = {
       setTimeout(function(){ if (!nome.value && !$('#area-form').hidden) nome.focus({ preventScroll: true }); }, reduz ? 0 : 650);
     }); });
 
-    /* ---------- contador até as 20h ---------- */
+    /* ---------- contador até as 18h ---------- */
     var timerT = $('#timer-t');
     function dois(n){ return (n < 10 ? '0' : '') + n; }
     function atualizaTimer(){
@@ -418,7 +418,7 @@ window.LP_FECHAMENTO = {
     }
     atualizaTimer(); setInterval(atualizaTimer, 1000);
 
-    /* ---------- depois das 20h ---------- */
+    /* ---------- depois das 18h ---------- */
     function encerrou(){ return Date.now() >= new Date(C.ENCERRA_EM).getTime(); }
     function aplicarEncerramento(){
       if (!encerrou()) return false;
