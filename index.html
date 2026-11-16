@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sua Jundiá começa agora | Live Jundiá</title>
-<meta name="description" content="Inicie agora uma reunião com um consultor de expansão e garanta sua praça pagando só 10% da taxa de franquia.">
+<title>Garanta a sua Jundiá | Live Jundiá</title>
+<meta name="description" content="Agende a reunião com a gente para aproveitar a oferta enquanto as praças ainda estão disponíveis.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#ED3237">
 <script>
@@ -29,7 +29,7 @@
 @font-face{font-family:'JD Futura';font-style:normal;font-weight:800;font-display:swap;src:url(https://rafacamargoo.github.io/aprovacao-jundia/live/jd-futura-800.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'JD Futura';font-style:normal;font-weight:900;font-display:swap;src:url(https://rafacamargoo.github.io/aprovacao-jundia/live/jd-futura-900.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'JD Modernline';font-style:normal;font-weight:400;font-display:swap;src:url(https://rafacamargoo.github.io/aprovacao-jundia/live/jd-modernline-400.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-:root{--yellow:#FFCC29;--brown:#5D2E21;--brown-dark:#4A241A;--red:#ED3237;--paper:#FBF7F0;--card:#FFFFFF;--line:#9C8B7C;--ok:#178A4E;
+:root{--yellow:#FFCC29;--brown:#5D2E21;--brown-dark:#4A241A;--red:#ED3237;--paper:#FBF7F0;--line:#9C8B7C;--ok:#178A4E;
   --heading:'JD Futura','Century Gothic',sans-serif;--body:'Archivo','Segoe UI',sans-serif;--bar:40px}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 12px)}
@@ -53,36 +53,56 @@ p{margin:0}
 .live-bar.off .dot{animation:none;opacity:.5}
 @keyframes letreiro{to{transform:translateX(-50%)}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
-
-/* hero: mesma composição da LP de captação (fundo amarelo, texto + foto do César com tarja) */
-.hero{position:relative;isolation:isolate;overflow:clip;background:radial-gradient(70% 80% at 80% 15%,#FFDB66 0%,rgba(255,219,102,0) 60%),var(--yellow);padding:calc(var(--bar) + 14px) 0 22px}
-.hero-watermark{position:absolute;right:-230px;top:120px;width:460px;opacity:.07;pointer-events:none;z-index:-1;animation:gira 60s linear infinite}
 @keyframes gira{to{transform:rotate(360deg)}}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "title" "photo" "sub" "form" "timer";gap:12px}
-.hero-copy,.hero-figure{display:contents}
-.topo{grid-area:top;display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+/* ===== seção 1: headline + apoio + botão, com o frame da live ao lado ===== */
+.hero{position:relative;isolation:isolate;overflow:clip;background:radial-gradient(70% 80% at 80% 15%,#FFDB66 0%,rgba(255,219,102,0) 60%),var(--yellow);padding:calc(var(--bar) + 14px) 0 14px}
+.hero-watermark{position:absolute;right:-230px;top:120px;width:460px;opacity:.07;pointer-events:none;z-index:-1;animation:gira 60s linear infinite}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.hero-copy{display:flex;flex-direction:column;gap:12px}
+.topo{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{width:74px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;border-radius:10px;padding:8px 12px;font-family:var(--heading);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:13px;line-height:1.1;box-shadow:0 0 0 0 rgba(237,50,55,.5);animation:chip 2.2s infinite}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;border-radius:10px;padding:8px 12px;font-family:var(--heading);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:13px;line-height:1.1;animation:chip 2.2s infinite}
 .eyebrow i{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#fff;color:var(--red);font:10px Arial,sans-serif;font-style:normal}
 @keyframes chip{0%{box-shadow:0 0 0 0 rgba(237,50,55,.5)}70%{box-shadow:0 0 0 12px rgba(237,50,55,0)}100%{box-shadow:0 0 0 0 rgba(237,50,55,0)}}
-.hero h1{grid-area:title;font-size:clamp(28px,8.2vw,34px);line-height:1.04;padding-bottom:.32em}
-.hero h1 .script{display:inline-block;font-family:'JD Modernline',cursive;font-weight:400;text-transform:none;letter-spacing:0;font-size:1.3em;line-height:1;white-space:nowrap;position:relative;padding:0 .04em .12em}
-.hero h1 .script::after{content:"";position:absolute;left:2%;right:0;bottom:.06em;height:5px;border-bottom:3px solid currentColor;border-radius:50%;transform-origin:left;transform:scaleX(0);animation:risca 1s .6s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes risca{to{transform:scaleX(1)}}
-.hero .sub{grid-area:sub;font-size:15px;line-height:1.45;color:#4A2A1C}
-.hero .sub strong{color:var(--brown);background:linear-gradient(transparent 58%,rgba(255,255,255,.65) 58%)}
+.hero h1{font-size:clamp(25px,7.4vw,31px);line-height:1.04}
+.hero .apoio{font-size:15px;line-height:1.45;color:#4A2A1C}
+.hero .btn-ir{display:none}
 
-/* foto do César com a tarja amarela, igual à captação */
-.photo-crop{grid-area:photo;position:relative;overflow:hidden;width:100%;height:clamp(118px,calc(100svh - 610px),360px);border:4px solid #fff;border-radius:18px;background:var(--brown);box-shadow:0 12px 25px rgba(93,46,33,.2)}
-.photo-crop img{width:100%;height:100%;object-fit:cover;object-position:68% 22%;animation:respira-foto 16s ease-in-out infinite alternate}
+/* frame de live do Instagram */
+.live-frame{position:relative;overflow:hidden;width:100%;height:clamp(128px,calc(100svh - 600px),360px);border:4px solid #fff;border-radius:18px;background:#1a0d08;box-shadow:0 12px 25px rgba(93,46,33,.22);color:#fff}
+.live-frame>img{width:100%;height:100%;object-fit:cover;object-position:68% 22%;animation:respira-foto 16s ease-in-out infinite alternate}
 @keyframes respira-foto{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1%,1%)}}
-.promo{position:absolute;z-index:2;top:0;left:12px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;width:104px;padding:9px 7px 8px;border-radius:0 0 12px 12px;background:var(--yellow);color:var(--brown);box-shadow:0 10px 22px rgba(30,12,4,.28)}
-.promo b{font-family:var(--heading);font-weight:800;font-size:30px;line-height:.9;letter-spacing:-.02em}
-.promo span{font-family:var(--heading);font-weight:800;text-transform:uppercase;font-size:8.5px;line-height:1.15}
-.promo em{margin-top:2px;font-style:normal;font-family:var(--heading);font-weight:800;text-transform:uppercase;font-size:7.5px;letter-spacing:.04em;background:var(--brown);color:#fff;padding:3px 7px;border-radius:999px;white-space:nowrap}
+.live-frame::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 52%,rgba(0,0,0,.6) 100%)}
+.ig-top{position:absolute;z-index:2;top:8px;left:8px;right:8px;display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700}
+.ig-avatar{flex:none;width:28px;height:28px;border-radius:50%;padding:2px;background:conic-gradient(#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5,#FEDA75)}
+.ig-avatar span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#fff;overflow:hidden}
+.ig-avatar img{width:86%}
+.ig-user{text-shadow:0 1px 3px rgba(0,0,0,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ig-live{flex:none;background:linear-gradient(90deg,#E1306C,#ED3237);border-radius:5px;padding:2px 6px;font-family:var(--heading);font-weight:800;font-size:10px;letter-spacing:.06em;animation:pisca 1.6s ease-in-out infinite}
+@keyframes pisca{50%{filter:brightness(1.25)}}
+.ig-views{flex:none;display:inline-flex;align-items:center;gap:4px;background:rgba(0,0,0,.45);border-radius:5px;padding:2px 6px;font-size:11px;font-variant-numeric:tabular-nums}
+.ig-views svg{width:12px;height:12px}
+.ig-oferta{position:absolute;z-index:2;right:8px;top:44px;max-width:44%;background:var(--yellow);color:var(--brown);border-radius:10px;padding:6px 8px;font-family:var(--heading);font-weight:800;text-transform:uppercase;font-size:9.5px;line-height:1.15;text-align:center;box-shadow:0 8px 18px rgba(0,0,0,.3);transform:rotate(3deg);animation:balanca 3.2s ease-in-out infinite}
+.ig-oferta b{display:block;font-size:1.25em}
+@keyframes balanca{0%,100%{transform:rotate(3deg)}50%{transform:rotate(0deg) translateY(-3px)}}
+.ig-comments{position:absolute;z-index:2;left:8px;bottom:34px;width:min(62%,280px);display:flex;flex-direction:column;justify-content:flex-end;gap:6px;max-height:55%;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 26%);mask-image:linear-gradient(180deg,transparent 0,#000 26%)}
+.ig-c{display:flex;gap:6px;align-items:flex-start;font-size:10.5px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.55);animation:sobe-c .5s cubic-bezier(.2,.8,.2,1)}
+.ig-c i{flex:none;width:20px;height:20px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;overflow:hidden}
+.ig-c i img{width:88%}
+.ig-c b{font-weight:800;margin-right:4px}
+@keyframes sobe-c{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ig-bottom{position:absolute;z-index:2;left:8px;right:8px;bottom:8px;display:flex;align-items:center;gap:8px}
+.ig-input{flex:1;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 12px;font-size:11px;color:rgba(255,255,255,.85)}
+.ig-bottom svg{flex:none;width:20px;height:20px}
+.ig-hearts{position:absolute;z-index:2;right:10px;bottom:34px;width:40px;height:60%;pointer-events:none}
+.ig-hearts span{position:absolute;bottom:0;left:50%;font-size:18px;animation:coracao var(--t,2.6s) ease-out forwards}
+@keyframes coracao{0%{opacity:0;transform:translate(-50%,0) scale(.6)}15%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--x,0px)),-180px) scale(1.1)}}
 
-/* formulário curto (2 campos) */
-.form-card{grid-area:form;background:var(--card);border-radius:18px;padding:16px;box-shadow:0 16px 36px rgba(93,46,33,.18);border-top:5px solid var(--red)}
+/* ===== seção 2: só o formulário + contador ===== */
+.cadastro{padding:6px 0 18px}
+.form-card{max-width:560px;margin-inline:auto;background:#fff;border-radius:18px;padding:16px;box-shadow:0 16px 36px rgba(93,46,33,.18);border-top:5px solid var(--red)}
+.form-card .titulo{display:none}
 #lead-form{display:grid;gap:10px}
 .campo{display:flex;flex-direction:column;gap:5px}
 .campo label{font-size:13px;font-weight:700;color:var(--brown)}
@@ -105,9 +125,13 @@ p{margin:0}
 .btn:disabled::after,.btn:disabled::before{display:none}
 .nota{display:flex;gap:7px;align-items:flex-start;font-size:12.5px;line-height:1.4;color:#6B5A4E}
 .nota svg{flex:none;width:15px;height:15px;margin-top:1px;color:var(--red)}
-.nota + .nota{margin-top:-2px}
 .espera{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14px}
 .espera i{width:18px;height:18px;border-radius:50%;border:3px solid rgba(93,46,33,.25);border-top-color:var(--brown);animation:gira .8s linear infinite}
+.timer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 12px;border-radius:14px;background:var(--brown);color:#fff}
+.timer small{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#F2E6DD;line-height:1.25}
+.timer .t{display:flex;gap:4px}
+.timer .t span{min-width:42px;text-align:center;padding:4px 6px;border-radius:8px;background:var(--yellow);color:var(--brown);font-family:var(--heading);font-weight:800;font-size:18px;line-height:1.1;font-variant-numeric:tabular-nums}
+.timer .t span em{display:block;font-style:normal;font-family:var(--body);font-weight:700;font-size:8.5px;letter-spacing:.04em;text-transform:uppercase}
 
 /* telas depois do envio */
 .tela:not([hidden]){animation:tela-in .5s cubic-bezier(.2,.8,.2,1)}
@@ -125,13 +149,6 @@ p{margin:0}
 .confete{position:fixed;top:-12px;z-index:60;width:10px;height:14px;border-radius:2px;pointer-events:none;animation:cai var(--t) linear forwards}
 @keyframes cai{to{transform:translate(var(--x),110vh) rotate(var(--r));opacity:.9}}
 
-/* contador até as 20h */
-.timer{grid-area:timer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:14px;background:var(--brown);color:#fff}
-.timer small{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#F2E6DD;line-height:1.25}
-.timer .t{display:flex;gap:4px}
-.timer .t span{min-width:42px;text-align:center;padding:4px 6px;border-radius:8px;background:var(--yellow);color:var(--brown);font-family:var(--heading);font-weight:800;font-size:18px;line-height:1.1;font-variant-numeric:tabular-nums}
-.timer .t span em{display:block;font-style:normal;font-family:var(--body);font-weight:700;font-size:8.5px;letter-spacing:.04em;text-transform:uppercase}
-
 /* 3 selos */
 .selos{display:grid;gap:8px;padding:6px 0 22px}
 .selo{position:relative;overflow:hidden;display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 10px 24px rgba(93,46,33,.14);opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i) * .12s)}
@@ -142,40 +159,54 @@ p{margin:0}
 
 .rodape{padding:0 0 calc(26px + env(safe-area-inset-bottom));font-size:12px;line-height:1.5;color:#6B4A3A;text-align:center}
 
-/* entrada animada */
 .entra{opacity:0;transform:translateY(16px);animation:sobe .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d,0s)}
 @keyframes sobe{to{opacity:1;transform:none}}
 
 @media(min-width:900px){
   :root{--bar:44px}
   .live-bar{font-size:13.5px}
-  .hero{padding:calc(var(--bar) + 40px) 0 34px}
+  .hero{padding:calc(var(--bar) + 44px) 0 64px}
   .hero-watermark{right:-180px;top:70px;width:680px}
-  .hero-grid{grid-template-columns:1.1fr .9fr;grid-template-areas:none;gap:clamp(40px,6vw,80px);align-items:center}
-  .hero-copy{display:flex;flex-direction:column;gap:18px}
-  .hero-figure{display:block;justify-self:end;width:100%;max-width:440px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,80px);align-items:center}
+  .hero-copy{gap:22px}
   .topo{justify-content:flex-start;gap:18px}
   .logo{width:96px}
   .eyebrow{font-size:16px;padding:10px 16px;border-radius:12px}
   .eyebrow i{width:28px;height:28px;font-size:12px}
-  .hero h1{font-size:clamp(44px,4.6vw,60px);padding-bottom:.42em}
-  .hero h1 .script{font-size:1.35em}
-  .hero .sub{font-size:18px;max-width:46ch}
-  .photo-crop{height:600px;border-width:6px;border-radius:28px;box-shadow:0 28px 60px rgba(93,46,33,.28)}
-  .promo{left:24px;width:178px;padding:20px 14px 16px;gap:6px;border-radius:0 0 16px 16px}
-  .promo b{font-size:52px}
-  .promo span{font-size:13px}
-  .promo em{font-size:11px;padding:6px 12px;margin-top:4px}
-  .form-card{padding:22px;max-width:520px}
-  #lead-form{grid-template-columns:1fr 1fr;gap:12px}
-  #lead-form .full{grid-column:1/-1}
-  .timer{max-width:520px}
-  .selos{grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0 40px}
+  .hero h1{font-size:clamp(42px,4.4vw,58px);line-height:1.02}
+  .hero .apoio{font-size:19px;max-width:42ch}
+  .hero .btn-ir{display:flex;max-width:440px;margin-top:6px}
+  .live-frame{justify-self:end;max-width:420px;height:600px;border-width:6px;border-radius:28px;box-shadow:0 28px 60px rgba(93,46,33,.28)}
+  .ig-top{top:14px;left:14px;right:14px;gap:9px;font-size:14px}
+  .ig-avatar{width:36px;height:36px}
+  .ig-live{font-size:12px;padding:3px 8px}
+  .ig-views{font-size:13px;padding:3px 8px}
+  .ig-views svg{width:14px;height:14px}
+  .ig-oferta{right:14px;top:66px;font-size:13px;padding:10px 12px;border-radius:12px;max-width:52%}
+  .ig-comments{left:14px;bottom:56px;gap:9px;max-height:46%}
+  .ig-c{font-size:14px}
+  .ig-c i{width:26px;height:26px}
+  .ig-bottom{left:14px;right:14px;bottom:14px}
+  .ig-input{font-size:13px;padding:8px 14px}
+  .ig-bottom svg{width:24px;height:24px}
+  .ig-hearts{right:16px;bottom:54px}
+  .ig-hearts span{font-size:24px}
+  .cadastro{padding:72px 0 40px;background:var(--paper)}
+  .form-card{padding:30px 32px}
+  .form-card .titulo{display:block;font-size:30px;margin-bottom:6px}
+  .form-card .sub-titulo{display:block;margin-bottom:18px;color:#6B5A4E}
+  #lead-form{gap:14px}
+  .selos-wrap{background:var(--paper)}
+  .selos{grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0 48px}
   .selo{padding:14px 16px}
+  .rodape-wrap{background:var(--paper)}
   .tela h2{font-size:28px}
 }
-@media(max-width:360px){.btn{font-size:13.5px;padding-left:14px}.hero h1{font-size:27px}.timer small{font-size:10px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.entra,.selo{opacity:1!important;transform:none!important}.hero h1 .script::after{transform:scaleX(1)}}
+.form-card .sub-titulo{display:none}
+.ig-c:nth-last-child(n+3){display:none}
+@media(min-width:900px){.ig-c:nth-last-child(n+3){display:flex}}
+@media(max-width:360px){.btn{font-size:13.5px;padding-left:14px}.timer small{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.entra,.selo{opacity:1!important;transform:none!important}.ig-hearts{display:none}}
 </style>
 </head>
 <body>
@@ -191,72 +222,86 @@ p{margin:0}
         <span class="eyebrow"><i aria-hidden="true">▶</i>Ao vivo agora</span>
         <img class="logo" src="https://rafacamargoo.github.io/aprovacao-jundia/live/imagem.png" alt="Jundiá Sorvetes" width="509" height="300">
       </div>
-      <h1 class="entra" style="--d:.1s">Sua Jundiá começa <span class="script">agora.</span></h1>
-      <p class="sub entra" style="--d:.25s">Inicie agora uma reunião com um consultor de expansão e garanta sua praça pagando <strong>só 10% da taxa de franquia</strong>.</p>
-
-      <div class="form-card entra" style="--d:.35s" id="cadastro" aria-labelledby="form-title">
-        <h2 id="form-title" hidden>Iniciar minha reunião</h2>
-        <div id="area-form">
-          <form id="lead-form" novalidate>
-            <div class="campo"><label for="nome">Nome <span class="req" aria-hidden="true">*</span></label><input type="text" id="nome" name="Nome_completo" autocomplete="name" placeholder="Seu nome" maxlength="120" required></div>
-            <div class="campo"><label for="telefone">WhatsApp com DDD <span class="req" aria-hidden="true">*</span></label><input type="tel" id="telefone" name="WhatsApp" inputmode="numeric" maxlength="15" autocomplete="tel" placeholder="(00) 00000-0000" required></div>
-            <p class="form-error full" id="form-error" role="alert"></p>
-            <button class="btn full" type="submit" id="btn-enviar">Iniciar minha reunião agora</button>
-            <p class="espera full" id="espera" hidden><i aria-hidden="true"></i>Conectando você a um consultor…</p>
-            <p class="nota full"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Leva 30 segundos. O consultor entra na chamada com você em instantes.</p>
-            <p class="nota full"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3.2-6.9"/><path d="M21 4v5h-5"/></svg>É uma reunião rápida, só para tirar suas dúvidas e garantir a praça. Os detalhes de loja vêm depois.</p>
-          </form>
-        </div>
-
-        <div class="tela ok" id="tela-livre" hidden tabindex="-1">
-          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 10l5-3v10l-5-3z"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg></div>
-          <h2>Pronto, <span data-nome></span>.</h2>
-          <p>Sua reunião já vai começar. O link chegou no seu WhatsApp.</p>
-          <a class="btn" id="btn-reuniao" href="#" target="_blank" rel="noopener">Entrar na reunião</a>
-        </div>
-
-        <div class="tela" id="tela-fila" hidden tabindex="-1">
-          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path class="ponteiro" d="M12 7v5l3 2"/></svg></div>
-          <h2>Você está na fila, <span data-nome></span>.</h2>
-          <p>Todos os consultores estão em reunião agora. Sua praça fica reservada por <strong id="fila-minutos">alguns minutos</strong> e o link chega no seu WhatsApp assim que alguém liberar.</p>
-        </div>
-
-        <div class="tela" id="tela-recebido" hidden tabindex="-1">
-          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></div>
-          <h2>Recebemos seu cadastro, <span data-nome></span>.</h2>
-          <p>Um consultor de expansão vai chamar você no WhatsApp em instantes com o link da reunião.</p>
-        </div>
-
-        <div class="tela" id="tela-encerrada" hidden tabindex="-1">
-          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
-          <h2>A live terminou.</h2>
-          <p>A live terminou e as condições especiais foram encerradas. Quer conhecer a franquia Jundiá mesmo assim?</p>
-          <a class="btn" id="btn-agendar" href="#">Agendar uma reunião</a>
-        </div>
-      </div>
-
-      <div class="timer entra" style="--d:.45s" id="timer"><small>Condição<br>termina em</small><div class="t" id="timer-t"></div></div>
+      <h1 class="entra" style="--d:.1s">Garanta a sua Jundiá enquanto a live está no ar.</h1>
+      <p class="apoio entra" style="--d:.25s">Agende a reunião com a gente para aproveitar a oferta enquanto as praças ainda estão disponíveis.</p>
+      <a class="btn btn-ir entra" style="--d:.4s" href="#cadastro" data-ir-form>Iniciar minha reunião agora</a>
     </div>
 
-    <figure class="hero-figure" style="margin:0">
-      <div class="photo-crop entra" style="--d:.15s">
-        <img src="https://rafacamargoo.github.io/aprovacao-jundia/live/hero-cesar.webp" alt="César, de terno azul, em frente a uma Loja de Fábrica Jundiá" width="1080" height="1008" fetchpriority="high">
-        <div class="promo" aria-hidden="true"><b>10%</b><span>da taxa de franquia</span><em>Durante a live</em></div>
+    <div class="live-frame entra" style="--d:.15s" role="img" aria-label="César, de terno azul, em frente a uma Loja de Fábrica Jundiá, na live da Jundiá no Instagram">
+      <img src="https://rafacamargoo.github.io/aprovacao-jundia/live/hero-cesar.webp" alt="" width="1080" height="1008" fetchpriority="high">
+      <div class="ig-top" aria-hidden="true">
+        <span class="ig-avatar"><span><img src="https://rafacamargoo.github.io/aprovacao-jundia/live/imagem.png" alt=""></span></span>
+        <span class="ig-user">sorvetesjundia</span>
+        <span class="ig-live">AO VIVO</span>
+        <span class="ig-views" id="ig-views" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="ig-views-n"></span></span>
       </div>
-    </figure>
+      <div class="ig-oferta" aria-hidden="true"><b>Oferta válida</b>enquanto durar a live</div>
+      <div class="ig-comments" id="ig-comments" aria-hidden="true"></div>
+      <div class="ig-hearts" id="ig-hearts" aria-hidden="true"></div>
+      <div class="ig-bottom" aria-hidden="true">
+        <span class="ig-input">Comentar…</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="wrap selos" aria-label="Condições da live">
+<section class="cadastro" id="cadastro" aria-labelledby="form-title">
+  <div class="wrap">
+    <div class="form-card revela" id="card">
+      <h2 class="titulo" id="form-title">Iniciar minha reunião</h2>
+      <p class="sub-titulo">Só nome e WhatsApp. O consultor chama você em instantes.</p>
+      <div id="area-form">
+        <form id="lead-form" novalidate>
+          <div class="campo"><label for="nome">Nome <span class="req" aria-hidden="true">*</span></label><input type="text" id="nome" name="Nome_completo" autocomplete="name" placeholder="Seu nome" maxlength="120" required></div>
+          <div class="campo"><label for="telefone">WhatsApp com DDD <span class="req" aria-hidden="true">*</span></label><input type="tel" id="telefone" name="WhatsApp" inputmode="numeric" maxlength="15" autocomplete="tel" placeholder="(00) 00000-0000" required></div>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button class="btn" type="submit" id="btn-enviar">Iniciar minha reunião agora</button>
+          <p class="espera" id="espera" hidden><i aria-hidden="true"></i>Conectando você a um consultor…</p>
+          <p class="nota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Leva 30 segundos. O consultor entra na chamada com você em instantes.</p>
+          <p class="nota"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3.2-6.9"/><path d="M21 4v5h-5"/></svg>É uma reunião rápida, só para tirar suas dúvidas e garantir a praça. Os detalhes de loja vêm depois.</p>
+        </form>
+      </div>
+
+      <div class="tela ok" id="tela-livre" hidden tabindex="-1">
+        <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 10l5-3v10l-5-3z"/><rect x="3" y="6" width="12" height="12" rx="2"/></svg></div>
+        <h2>Pronto, <span data-nome></span>.</h2>
+        <p>Sua reunião já vai começar. O link chegou no seu WhatsApp.</p>
+        <a class="btn" id="btn-reuniao" href="#" target="_blank" rel="noopener">Entrar na reunião</a>
+      </div>
+      <div class="tela" id="tela-fila" hidden tabindex="-1">
+        <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path class="ponteiro" d="M12 7v5l3 2"/></svg></div>
+        <h2>Você está na fila, <span data-nome></span>.</h2>
+        <p>Todos os consultores estão em reunião agora. Sua praça fica reservada por <strong id="fila-minutos">alguns minutos</strong> e o link chega no seu WhatsApp assim que alguém liberar.</p>
+      </div>
+      <div class="tela" id="tela-recebido" hidden tabindex="-1">
+        <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></div>
+        <h2>Recebemos seu cadastro, <span data-nome></span>.</h2>
+        <p>Um consultor de expansão vai chamar você no WhatsApp em instantes com o link da reunião.</p>
+      </div>
+      <div class="tela" id="tela-encerrada" hidden tabindex="-1">
+        <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+        <h2>A live terminou.</h2>
+        <p>A live terminou e as condições especiais foram encerradas. Quer conhecer a franquia Jundiá mesmo assim?</p>
+        <a class="btn" id="btn-agendar" href="#">Agendar uma reunião</a>
+      </div>
+
+      <div class="timer" id="timer"><small>Condição<br>termina em</small><div class="t" id="timer-t"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="selos-wrap"><section class="wrap selos" aria-label="Condições da live">
   <div class="selo" style="--i:0"><b data-conta="10" data-fmt="%">10%</b><span>da taxa de franquia</span></div>
   <div class="selo" style="--i:1"><b data-conta="30" data-fmt="mil">R$ 30 mil</b><span>Concorra na sua loja</span></div>
   <div class="selo" style="--i:2"><b>+</b><span>Bônus da live inclusos</span></div>
-</section>
+</section></div>
 </main>
 
-<footer class="rodape wrap">
+<div class="rodape-wrap"><footer class="rodape wrap">
   <p>Condições válidas só para contratos firmados durante a live de <span data-data-live></span>, sujeitas a análise de perfil e à disponibilidade da praça.</p>
-</footer>
+</footer></div>
 
 <script>
 /* ===================== CONFIGURAÇÃO (editar aqui) =====================
@@ -275,7 +320,18 @@ window.LP_FECHAMENTO = {
   STATUS_TIMEOUT_MS: 12000,
   PAGINA: 'lp-fechamento-live',
   RESERVA_MINUTOS: null,
-  AGENDAR_URL: 'franquia.jundia.com.br/#cadastro'
+  AGENDAR_URL: 'franquia.jundia.com.br/#cadastro',
+  /* Frame da live na foto do César.
+     LIVE_ESPECTADORES: número real de pessoas assistindo (ex.: '1,2 mil'). Vazio = o contador não aparece.
+     LIVE_COMENTARIOS: mensagens que sobem na lateral. Use comentários reais da live ou mensagens da própria Jundiá. */
+  LIVE_ESPECTADORES: '',
+  LIVE_COMENTARIOS: [
+    { nome: 'sorvetesjundia', texto: 'Oferta válida enquanto durar a live 🍦' },
+    { nome: 'sorvetesjundia', texto: 'Consultores de expansão online agora' },
+    { nome: 'sorvetesjundia', texto: 'Garanta sua praça: o formulário leva 30 segundos' },
+    { nome: 'sorvetesjundia', texto: 'Praças sendo reservadas durante a live' },
+    { nome: 'sorvetesjundia', texto: 'Dúvidas? O consultor responde na reunião' }
+  ]
 };
 /* ===================================================================== */
 
@@ -306,6 +362,38 @@ window.LP_FECHAMENTO = {
       }
     }
     function primeiroNome(){ return (nome.value || '').trim().split(/\s+/)[0] || ''; }
+
+    /* ---------- frame da live: espectadores, comentários subindo e corações ---------- */
+    (function(){
+      var v = String(C.LIVE_ESPECTADORES || '').trim();
+      if (v) { $('#ig-views-n').textContent = v; $('#ig-views').hidden = false; }
+      var box = $('#ig-comments'), lista = (C.LIVE_COMENTARIOS || []).filter(function(c){ return c && c.texto; }), k = 0;
+      var logo = 'https:\/\/rafacamargoo.github.io\/aprovacao-jundia\/live\/imagem.png';
+      function novo(){
+        if (!lista.length) return;
+        var c = lista[k % lista.length]; k++;
+        var el = document.createElement('div'); el.className = 'ig-c';
+        var av = document.createElement('i'); var im = document.createElement('img'); im.src = logo; im.alt = ''; av.appendChild(im);
+        var tx = document.createElement('span'); var nb = document.createElement('b'); nb.textContent = c.nome || ''; tx.appendChild(nb); tx.appendChild(document.createTextNode(c.texto));
+        el.appendChild(av); el.appendChild(tx); box.appendChild(el);
+        while (box.children.length > 4) box.removeChild(box.firstChild);
+      }
+      novo(); if (!reduz) { setTimeout(novo, 900); setInterval(novo, 2600); }
+      var hearts = $('#ig-hearts'), emojis = ['❤️','🧡','💛','😍','🍦'];
+      function coracao(){
+        var s = document.createElement('span'); s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        s.style.setProperty('--x', ((Math.random() - .5) * 40) + 'px'); s.style.setProperty('--t', (2.2 + Math.random() * 1.2) + 's');
+        hearts.appendChild(s); setTimeout(function(){ s.remove(); }, 3600);
+      }
+      if (!reduz) setInterval(coracao, 700);
+    })();
+
+    /* ---------- botão do topo leva ao formulário ---------- */
+    $$('[data-ir-form]').forEach(function(a){ a.addEventListener('click', function(e){
+      e.preventDefault();
+      $('#cadastro').scrollIntoView({ behavior: reduz ? 'auto' : 'smooth', block: 'start' });
+      setTimeout(function(){ if (!nome.value && !$('#area-form').hidden) nome.focus({ preventScroll: true }); }, reduz ? 0 : 650);
+    }); });
 
     /* ---------- contador até as 20h ---------- */
     var timerT = $('#timer-t');
